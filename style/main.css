@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+body {
+  background: #EEEEEE;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "Lato", sans-serif;
+  color: #EEEEEE;
+}
+
+main {
+  background-image: linear-gradient(0deg, #464659 50%, #535366 100%);
+  width: 375px;
+  height: 700px;
+  display: grid;
+  grid-template-rows: 70px 350px 130px 150px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.header .container, .header .container-title, .header .container-playing {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  padding: 0;
+}
+.header .container-playing {
+  font-size: 12px;
+  align-items: flex-end;
+}
+.header .container-playing p {
+  margin: 0;
+}
+.header .container-title {
+  font-size: 16px;
+  align-items: flex-start;
+}
+.header .container-title h1 {
+  margin: 5px auto 0px;
+}
+
+.album {
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.album .container-cover {
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 7px 7px 10px #3e3e4e, -7px -7px 10px #58586e;
+}
+.album .container-cover > img {
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  height: 130px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.info .info-track {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+.info .info-track .base-item-info-track, .info .info-track .container-artist, .info .info-track .container-track {
+  display: flex;
+  width: 280px;
+  height: 50%;
+  margin: 0;
+}
+.info .info-track .container-track {
+  align-items: end;
+}
+.info .info-track .container-track h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+.info .info-track .container-artist {
+  align-items: start;
+}
+.info .info-track .container-artist h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.info .info-playing {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info .info-playing .container-bar {
+  height: 5px;
+  width: 280px;
+  background-color: greenyellow;
+  display: inline-block;
+  position: relative;
+  border-radius: 3px;
+  background-color: #444456;
+  box-shadow: 0px 0.5px 1px #eeee, 0px -0.5px 1px #000;
+}
+.info .info-playing .container-bar .bar-lapsed {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 25%;
+  background-color: #EEEEEE;
+  border-radius: 3px;
+}
+.info .info-playing .time {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 280px;
+  height: 50%;
+  font-size: 12px;
+}
+.info .info-playing .time p {
+  margin: 7px 0;
+}
+.info .info-playing .time-progress {
+  justify-self: start;
+}
+.info .info-playing .time-track {
+  justify-self: end;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.actions .material-icons {
+  color: #eeee;
+}
+.actions .material-icons:hover {
+  color: gray;
+}
+.actions .container-buttons {
+  display: grid;
+  margin-top: 10px;
+  height: 80px;
+  grid-template-columns: 45px 50px 95px 50px 45px;
+  grid-template-rows: 1fr;
+  gap: 3px;
+  background-color: #404052;
+  box-shadow: 0px 0.5px 1px #eeee, 0px -0.5px 1px #000;
+}
+.actions .container-shuffle {
+  grid-area: 1/1/1/2;
+  place-self: center;
+}
+.actions .container-shuffle .shuffle {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.actions .container-shuffle .shuffle span {
+  font-size: 1rem;
+}
+.actions .container-play {
+  grid-area: 1/3/1/4;
+  place-self: center;
+}
+.actions .container-play .play {
+  height: 70px;
+  width: 70px;
+  background-color: #464659;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 1px #000, 0px -1px 1px #eee;
+}
+.actions .container-play .play span {
+  font-size: 3rem;
+}
+.actions .container-skip-next {
+  grid-area: 1/4/1/5;
+  place-self: center;
+}
+.actions .container-skip-next .next {
+  height: 50px;
+  width: 50px;
+  background-color: #464659;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 1px #000, 0px -1px 1px #eee;
+}
+.actions .container-skip-next .next span {
+  font-size: 1.8rem;
+}
+.actions .container-skip-previous {
+  grid-area: 1/2/1/3;
+  place-self: center;
+}
+.actions .container-skip-previous .previous {
+  height: 50px;
+  width: 50px;
+  background-color: #464659;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 0.5px 1px #000, 0px -1px 1px #eee;
+}
+.actions .container-skip-previous .previous span {
+  font-size: 1.8rem;
+}
+.actions .container-repeat {
+  grid-area: 1/5/1/6;
+  place-self: center;
+}
+.actions .container-repeat .repeat {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.actions .container-repeat .repeat span {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
